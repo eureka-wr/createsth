@@ -13,6 +13,7 @@ test("keeps the complete personal portfolio content", async () => {
   assert.match(page, /Learn in Public/);
   assert.match(page, /Next Step/);
   assert.match(page, /Join Me/);
+  assert.match(page, /Let&apos;s build together!/);
   assert.match(page, /小猫电视台/);
   assert.match(page, /小猫游戏机/);
   assert.match(page, /站一下/);

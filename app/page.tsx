@@ -284,7 +284,7 @@ export default function Home() {
         <div className="shell join-grid">
           <div>
             <p className="section-id light">04 / OPEN TO COLLABORATION</p>
-            <h2 id="join-title">Join Me</h2>
+            <h2 id="join-title">Let&apos;s build together!</h2>
           </div>
           <div className="join-content">
             <h3>如果你也想创造点什么，<br />我们可以先从一次对话开始。</h3>
