@@ -16,6 +16,10 @@ test("keeps the complete personal portfolio content", async () => {
   assert.match(page, /小猫电视台/);
   assert.match(page, /小猫游戏机/);
   assert.match(page, /站一下/);
+  assert.match(page, /小猫文学输入器/);
+  assert.match(page, /https:\/\/game\.catv\.space/);
+  assert.match(page, /https:\/\/tiny\.catv\.space/);
+  assert.match(page, /https:\/\/chat\.catv\.space/);
   assert.match(page, /mailto:jessica@relife365\.cn/);
   assert.match(layout, /og-business\.png/);
 

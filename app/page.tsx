@@ -12,19 +12,31 @@ const projects = [
     index: "02",
     title: "小猫游戏机",
     english: "Cat Arcade",
-    status: "In progress",
-    description: "给小猫玩的轻量互动游戏。让爪子、屏幕和随机反馈，组成一段简单但有趣的互动。",
+    status: "Live",
+    description: "给小猫玩的钓鱼池互动游戏。可以按年龄和性格调整节奏，让触碰、躲藏与反馈更适合不同猫咪。",
     tags: ["Mini Game", "Interaction"],
     visual: "arcade",
+    url: "https://game.catv.space",
   },
   {
     index: "03",
     title: "站一下",
     english: "Stand for a moment",
-    status: "Testing",
+    status: "Live",
     description: "为久坐办公的人设计的微休息工具。在合适的时刻提醒你站起来、活动一下，再继续专注。",
     tags: ["Tiny Tool", "Wellbeing"],
     visual: "stand",
+    url: "https://tiny.catv.space",
+  },
+  {
+    index: "04",
+    title: "小猫文学输入器",
+    english: "Cat Literature Editor",
+    status: "Live",
+    description: "把日常对白写成一段小猫文学。编辑聊天角色、语气与故事细节，并导出一张完整长图。",
+    tags: ["Creative Tool", "Storytelling"],
+    visual: "chat",
+    url: "https://chat.catv.space",
   },
 ];
 
@@ -178,12 +190,27 @@ export default function Home() {
                     <p>TIME TO MOVE</p>
                   </div>
                 )}
+                {project.visual === "chat" && (
+                  <div className="chat-unit">
+                    <div className="chat-title"><i /> CAT LITERATURE</div>
+                    <div className="chat-bubble cat-message">小猫才没有等你</div>
+                    <div className="chat-bubble human-message">那我抱一下？</div>
+                    <div className="chat-bubble cat-message short">只准三分钟。</div>
+                  </div>
+                )}
               </div>
               <p className="project-english">{project.english}</p>
               <h3>{project.title}</h3>
               <p className="project-description">{project.description}</p>
               <div className="tag-row">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-              <a className="project-link" href="#join-me">View concept <span>↗</span></a>
+              <a
+                className="project-link"
+                href={project.url ?? "#join-me"}
+                target={project.url ? "_blank" : undefined}
+                rel={project.url ? "noreferrer" : undefined}
+              >
+                {project.url ? "Visit project" : "View concept"} <span>↗</span>
+              </a>
             </article>
           ))}
         </div>
