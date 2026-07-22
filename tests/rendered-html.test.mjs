@@ -21,6 +21,8 @@ test("keeps the complete personal portfolio content", async () => {
   assert.match(page, /https:\/\/game\.catv\.space/);
   assert.match(page, /https:\/\/tiny\.catv\.space/);
   assert.match(page, /https:\/\/chat\.catv\.space/);
+  assert.match(page, /project-preview-link/);
+  assert.match(page, /Open project/);
   assert.match(page, /mailto:jessica@relife365\.cn/);
   assert.match(layout, /og-business\.png/);
 

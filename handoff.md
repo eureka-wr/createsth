@@ -27,6 +27,8 @@
 - **[站一下 / Stand for a moment](https://tiny.catv.space)** — 面向久坐办公人群的轻量休息提醒工具
 - **[小猫文学输入器 / Cat Literature Editor](https://chat.catv.space)** — 编辑小猫风格聊天故事并导出完整长图
 
+带有真实地址的项目支持点击预览图片或卡片底部链接，在新标签页打开对应产品。
+
 ## 技术与部署
 
 - 框架：Next.js 16 App Router

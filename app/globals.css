@@ -91,6 +91,7 @@ section { scroll-margin-top: 84px; }
 .project-meta { display: flex; justify-content: space-between; align-items: center; font: 9px "Courier New", monospace; }
 .project-status { color: var(--muted); }.project-status i, .learning-purpose span i { display: inline-block; width: 6px; height: 6px; margin-right: 5px; border-radius: 50%; background: var(--sage); }
 .project-preview { height: 215px; margin: 18px 0 24px; display: grid; place-items: center; overflow: hidden; position: relative; }
+.project-preview-link { position: absolute; inset: 0; z-index: 5; display: flex; align-items: flex-end; justify-content: flex-end; padding: 12px; cursor: pointer; outline-offset: -4px; }.project-preview-link span { padding: 7px 9px; background: var(--paper); border: 1px solid var(--ink); color: var(--ink); font-size: 8px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; opacity: 0; transform: translateY(5px); transition: opacity .2s ease, transform .2s ease; }.project-preview-link:hover span, .project-preview-link:focus-visible span { opacity: 1; transform: translateY(0); }
 .project-preview.tv { background: #d9cabb; }.project-preview.arcade { background: #aab5a1; }.project-preview.stand { background: #d9d7cc; }.project-preview.chat { background: #d8b8a9; }
 .tv-unit { width: 205px; padding: 13px 13px 9px; border-radius: 10px; background: var(--ink); box-shadow: 10px 12px 0 rgba(255,255,255,.3); }
 .tv-screen { height: 115px; display: grid; place-items: center; position: relative; overflow: hidden; background: var(--terracotta); color: var(--ink); }

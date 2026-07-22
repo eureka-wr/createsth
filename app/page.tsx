@@ -171,7 +171,10 @@ export default function Home() {
                 <span>{project.index}</span>
                 <span className="project-status"><i /> {project.status}</span>
               </div>
-              <div className={`project-preview ${project.visual}`} aria-hidden="true">
+              <div
+                className={`project-preview ${project.visual}`}
+                aria-hidden={project.url ? undefined : true}
+              >
                 {project.visual === "tv" && (
                   <div className="tv-unit">
                     <div className="tv-screen"><span>CAT TV</span><b>• ᴥ •</b></div>
@@ -197,6 +200,17 @@ export default function Home() {
                     <div className="chat-bubble human-message">那我抱一下？</div>
                     <div className="chat-bubble cat-message short">只准三分钟。</div>
                   </div>
+                )}
+                {project.url && (
+                  <a
+                    className="project-preview-link"
+                    href={project.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`访问${project.title}`}
+                  >
+                    <span>Open project ↗</span>
+                  </a>
                 )}
               </div>
               <p className="project-english">{project.english}</p>
