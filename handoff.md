@@ -1,4 +1,4 @@
-# Handoff — 2026-07-22
+# Handoff — 2026-07-24
 
 ## 项目概况
 
@@ -16,7 +16,7 @@
 3. **My Playground** — 已完成或持续迭代的产品项目
 4. **Learn in Public** — AI 与产品制作过程中的学习记录
 5. **Next Step** — 下一阶段方向与对应的 WHY
-6. **Let’s build together!** — 合作邀请与联系邮箱
+6. **Let’s build together!** — 合作邀请、联系邮箱，以及飞书和微信二维码
 
 顶部导航仍使用简洁的 `Join Me`，对应最后的合作区域。
 
@@ -52,15 +52,17 @@
 
 - 首屏照片：`public/hero-jessica.jpg`
 - 分享封面：`public/og-business.png`
+- 飞书联系二维码：`public/contact-lark.jpg`
+- 微信联系二维码：`public/contact-wechat.jpg`
 - 页面内容：`app/page.tsx`
 - 页面样式：`app/globals.css`
 - 元数据：`app/layout.tsx`
 
 ## 今天的关键提交
 
-- `e90e4f2` — 首次发布个人网站
-- `fbbd13d` — 迁移为标准 Next.js，修复 Vercel 构建
-- `23c8a5d` — 接入真实 Playground 项目并新增小猫文学输入器
+- Playground 项目预览图已支持直接点击并跳转到对应产品
+- 在最后的合作区域加入飞书和微信二维码卡片，桌面端并排、移动端纵向显示
+- 二维码保留完整原图比例和留白，避免裁切影响识别
 
 ## 验证状态
 
@@ -74,4 +76,4 @@
 - 本次推送后确认 Vercel 最新部署状态为 Ready
 - 如果小猫电视台有独立地址，在 `app/page.tsx` 的第一个项目对象中补充 `url`
 - Learn in Public 当前内容是网站示例，后续应替换为 Jessica 的真实更新
-- 如需修改合作入口，最后区域的锚点为 `#join-me`
+- 如需修改合作入口，最后区域的锚点为 `#join-me`，二维码卡片样式在 `app/globals.css` 的 `.contact-*` 规则中

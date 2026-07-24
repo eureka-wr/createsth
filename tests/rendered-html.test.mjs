@@ -24,10 +24,16 @@ test("keeps the complete personal portfolio content", async () => {
   assert.match(page, /project-preview-link/);
   assert.match(page, /Open project/);
   assert.match(page, /mailto:jessica@relife365\.cn/);
+  assert.match(page, /\/contact-lark\.jpg/);
+  assert.match(page, /\/contact-wechat\.jpg/);
+  assert.match(page, /飞书联系人二维码/);
+  assert.match(page, /微信联系人二维码/);
   assert.match(layout, /og-business\.png/);
 
   await access(new URL("../public/hero-jessica.jpg", import.meta.url));
   await access(new URL("../public/og-business.png", import.meta.url));
+  await access(new URL("../public/contact-lark.jpg", import.meta.url));
+  await access(new URL("../public/contact-wechat.jpg", import.meta.url));
 });
 
 test("uses the standard Next.js build for Vercel", async () => {

@@ -314,6 +314,31 @@ export default function Home() {
             </div>
             <a className="button button-light" href="mailto:jessica@relife365.cn">Start a conversation <span>↗</span></a>
             <p className="email-placeholder">jessica@relife365.cn</p>
+            <div className="contact-divider">
+              <span>OR SCAN TO CONNECT</span>
+            </div>
+            <div className="contact-cards" aria-label="扫码联系 Jessica">
+              <figure className="contact-card">
+                <figcaption>
+                  <span>飞书</span>
+                  <small>LARK</small>
+                </figcaption>
+                <img
+                  src="/contact-lark.jpg"
+                  alt="Jessica 的飞书联系人二维码"
+                />
+              </figure>
+              <figure className="contact-card">
+                <figcaption>
+                  <span>微信</span>
+                  <small>WECHAT</small>
+                </figcaption>
+                <img
+                  src="/contact-wechat.jpg"
+                  alt="Jessica 的微信联系人二维码"
+                />
+              </figure>
+            </div>
           </div>
         </div>
       </section>
