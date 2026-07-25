@@ -1,4 +1,4 @@
-# Handoff — 2026-07-24
+# Handoff — 2026-07-25
 
 ## 项目概况
 
@@ -58,11 +58,31 @@
 - 页面样式：`app/globals.css`
 - 元数据：`app/layout.tsx`
 
+## 微信视频号个人介绍片
+
+已制作一支 42 秒个人品牌介绍视频，内容沿用网站的个人定位、真实项目与合作邀请。
+
+- 成片：`deliverables/wechat-video/output/jessica-wechat-video.mp4`
+- 视频号封面：`deliverables/wechat-video/output/jessica-wechat-cover.png`
+- 外挂字幕：`deliverables/wechat-video/output/jessica-wechat-video.srt`
+- 分镜与发布文案：`deliverables/wechat-video/storyboard.md`
+- 制作源文件：`deliverables/wechat-video/source/`
+- 规格：1080 × 1920、9:16、42 秒、H.264 视频 + AAC 音频
+- 内容结构：品牌 Slogan → Jessica 自我介绍 → 个人网站 → 三个 Playground 项目 → 工作方法 → Learn in Public → 合作邀请
+- 音频：中文旁白、原创轻量环境音乐、内嵌大字幕
+
+重新生成时，在项目根目录运行：
+
+```bash
+./deliverables/wechat-video/source/build_video.sh
+```
+
 ## 今天的关键提交
 
 - Playground 项目预览图已支持直接点击并跳转到对应产品
 - 在最后的合作区域加入飞书和微信二维码卡片，桌面端并排、移动端纵向显示
 - 二维码保留完整原图比例和留白，避免裁切影响识别
+- 制作适配微信视频号的竖屏个人品牌介绍片，并补齐封面、字幕、分镜和可复用生成脚本
 
 ## 验证状态
 
@@ -74,6 +94,7 @@
 ## 后续注意事项
 
 - 本次推送后确认 Vercel 最新部署状态为 Ready
+- 视频发布前可直接使用 `jessica-wechat-cover.png` 作为封面，发布文案见 `storyboard.md`
 - 如果小猫电视台有独立地址，在 `app/page.tsx` 的第一个项目对象中补充 `url`
 - Learn in Public 当前内容是网站示例，后续应替换为 Jessica 的真实更新
 - 如需修改合作入口，最后区域的锚点为 `#join-me`，二维码卡片样式在 `app/globals.css` 的 `.contact-*` 规则中

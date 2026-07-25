@@ -40,3 +40,8 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+deliverables/wechat-video/.build/
+deliverables/wechat-video/source/ambient-bed.wav
+deliverables/wechat-video/source/narration.aiff
+deliverables/wechat-video/output/jessica-intro-silent.mp4
+deliverables/wechat-video/output/previews/
