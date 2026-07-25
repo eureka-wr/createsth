@@ -8,6 +8,7 @@
 - 联系邮箱：`jessica@relife365.cn`
 - GitHub：<https://github.com/eureka-wr/createsth>
 - 生产部署：Vercel 连接 GitHub `main` 分支自动部署
+- 最新功能基线提交：`f9d9d21`
 
 ## 当前页面结构
 
@@ -67,9 +68,10 @@
 - 外挂字幕：`deliverables/wechat-video/output/jessica-wechat-video.srt`
 - 分镜与发布文案：`deliverables/wechat-video/storyboard.md`
 - 制作源文件：`deliverables/wechat-video/source/`
-- 规格：1080 × 1920、9:16、42 秒、H.264 视频 + AAC 音频
+- 规格：1080 × 1920、9:16、42 秒、H.264 视频 + AAC 音频，最终文件约 12.5 MB
 - 内容结构：品牌 Slogan → Jessica 自我介绍 → 个人网站 → 三个 Playground 项目 → 工作方法 → Learn in Public → 合作邀请
 - 音频：Shelley 中文成年女声，语速 175；温柔、克制、偏理性的表达；原创轻量环境音乐、内嵌大字幕
+- 当前状态：新版配音已覆盖最终成片，尚未发布到微信视频号，等待 Jessica 确认
 
 重新生成时，在项目根目录运行：
 
@@ -79,22 +81,23 @@
 
 ## 今天的关键提交
 
-- Playground 项目预览图已支持直接点击并跳转到对应产品
-- 在最后的合作区域加入飞书和微信二维码卡片，桌面端并排、移动端纵向显示
-- 二维码保留完整原图比例和留白，避免裁切影响识别
-- 制作适配微信视频号的竖屏个人品牌介绍片，并补齐封面、字幕、分镜和可复用生成脚本
+- `3d3245c` — 制作适配微信视频号的竖屏个人品牌介绍片，并补齐封面、字幕、分镜和可复用生成脚本
+- `f9d9d21` — 将旁白更换为更温柔、理性、克制的 Shelley 中文女声，降低语速和背景音乐音量
 
 ## 验证状态
 
 - `next build`：通过
 - TypeScript：通过
 - 内容与部署配置测试：2 项通过
+- 视频画面：9 个关键分镜预览逐张检查通过
+- 视频媒体信息：1080 × 1920、42 秒、H.264 + AAC
+- 视频构建：Swift 画面合成、旁白生成、音乐混音和 MP4 导出均通过
 - GitHub `main`：与远程同步
 
 ## 后续注意事项
 
-- 本次推送后确认 Vercel 最新部署状态为 Ready
-- 视频发布前可直接使用 `jessica-wechat-cover.png` 作为封面，发布文案见 `storyboard.md`
+- 视频发布前先确认新版女声效果；确认后可直接使用 `jessica-wechat-cover.png` 作为封面，发布文案见 `storyboard.md`
+- 当前连接的 Vercel 账号未返回此项目，无法在 Codex 中确认最新部署状态；需要时从 Vercel 控制台检查
 - 如果小猫电视台有独立地址，在 `app/page.tsx` 的第一个项目对象中补充 `url`
 - Learn in Public 当前内容是网站示例，后续应替换为 Jessica 的真实更新
 - 如需修改合作入口，最后区域的锚点为 `#join-me`，二维码卡片样式在 `app/globals.css` 的 `.contact-*` 规则中
