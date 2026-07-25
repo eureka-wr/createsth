@@ -79,9 +79,9 @@ struct AudioMuxer {
         let narrationMix = AVMutableAudioMixInputParameters(track: targetNarration)
         narrationMix.setVolume(1.0, at: .zero)
         let musicMix = AVMutableAudioMixInputParameters(track: targetMusic)
-        musicMix.setVolume(0.34, at: .zero)
+        musicMix.setVolume(0.26, at: .zero)
         musicMix.setVolumeRamp(
-            fromStartVolume: 0.34,
+            fromStartVolume: 0.26,
             toEndVolume: 0.0,
             timeRange: CMTimeRange(
                 start: CMTime(seconds: 39.0, preferredTimescale: 600),

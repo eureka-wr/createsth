@@ -8,7 +8,11 @@ BUILD_DIR="$PROJECT_ROOT/deliverables/wechat-video/.build"
 mkdir -p "$BUILD_DIR"
 
 python3 "$SOURCE_DIR/make_music.py"
-say -v Tingting -r 190 -f "$SOURCE_DIR/narration.txt" -o "$SOURCE_DIR/narration.aiff"
+say \
+  -v 'Shelley (Chinese (China mainland))' \
+  -r 175 \
+  -f "$SOURCE_DIR/narration.txt" \
+  -o "$SOURCE_DIR/narration.aiff"
 
 swiftc \
   -parse-as-library \
